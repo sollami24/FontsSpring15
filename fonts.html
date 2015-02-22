@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Fonts! Fonts! Fonts</title>
+<meta charset="utf-8" />
+<style>
+#serif {
+  font-family: serif;
+}
+#sans {
+  font-family: sans-serif;
+}
+#monospace {
+  font-family: monospace;
+}
+#cursive {
+  font-family: cursive;
+}
+#fantasy {
+  font-family: fantasy;
+}
+</style>
+</head>
+<body>
+  <section id="introduction">
+  <h1>Fonts! Fonts! Fonts!</h1>
+  The easiest, fastest thing you can do to show your readers you've put some thought into the design of your page is to use a custom font. Almost everyone associates the default browser fonts with sloppy, amateur design. In this exercise we'll learn about the font-family css property and how to use it. <em>Important!!!</em> The <strong>BEST</strong> way to incorporate fonts into web documents is to use web fonts, which are discussed in the last section of this document. I discuss generic font-family names and local fonts so that you will be aware of them, and so you'll see why web fonts are so powerful. However, these should be used as fallback fonts for web fonts, not as the primary source of fonts in your design.
+  <section id="fontFamily">
+    <h2>The font-family property and generic families</h2>
+    We set the typeface (what a word-processor would call the font) of our text using the font-family property. Take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">documentation for font-family on MDN.</a> In short, font-family lets us specify lists of fonts in order of priority. The browser will try each font in the list, in order, from the first listed to the last, until it finds one that is either installed on the user's computer (local font) or available from a server on the web (web font). It will then apply this font to the elements selected by our CSS rule.
+<p>Take a look at the lists of fonts provided in the examples on the MDN documentation page. Notice that the last font listed is always one of the generic family names, listed below:</p>
+  <ul>
+    <li id="serif">serif</li>
+    <li id="sans">sans-serif</li>
+    <li id="monospace">monospace</li>
+    <li id="cursive">cursive</li>
+    <li id="fantasy">fantasy</li>
+  </ul>
+<p>Serif and sans-serif you should recognize from our reading. (NOTE: Oldstyle, slab-serif, and modern fonts are all serif fonts.) "Cursive" is basically what the book call "script," and "fantasy" is effectively "decorative." These generic family names tell the browser to pick something from the broad family of fonts if nothing else is available for use.</p>
+<h3>Exercise 1</h3>
+Try the generic family names now. Add css rules to the style element of this document so each of the family names in the list above is displayed in a the generic font from that family (i.e. serif in a serif font, sans-serif in sans-serif). Try to remember what this font looks like! If you see it after trying to apply a local or web fonts, something has gone wrong! (Hint: you'll need to select by id, using the '#' to get this to work)
+
+<section id="usingGFonts">
+	<h1>Using Google Fonts</h1>
+	<p>
+	Remember that, for each Google font you want to use, you must include 2 lines of code in the head section of your page. The first line is a link element that includes the font information from Google's servers. The second is a font-family rule that tells the browser where you want to apply the font on the page. So, to include the font "Alegreya" and use it as the default font for all elements we would need to add this link line before our style section:</p>
+	<p>
+         &lt;link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'&gt;
+	</p>
+	<p>
+	And then add the following rule to our style section:
+	</p>
+	<p>
+	body { <br />
+	  font-family: 'Alegreya', serif;<br />
+	}
+	</p>
+	<p>
+	We could also add this line to a seperate style sheet, so long as we linked this seperate stylesheet <em>After</em> linking the Google Stylesheet with the font information. To add another font, say "Bitter" we'd need to add another stylesheet link, and then use the font-family rule to describe where this font should appear!</p>
+</section>
+
+</body>
+</html>
