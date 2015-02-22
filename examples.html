@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Font application exercises</title>
+<meta charset="utf-8" />
+<style>
+
+</style>
+</head>
+<body>
+<section id="introduction">
+  <p>Below are some headlines and sample paragraphs taken from real websites. (NOTE: The reproduction of the content of these websites is for the purposes of student instruction, and falls under academic fair use.) For each example, consider the text given and the situation and choose appropriate body and headline fonts. Apply them via the style section above. Avoid looking up the original website, the goal of this exercise is for you to think about purpose and audience when selecting fonts.</p>
+  <p><strong>How to select headlines and paragraphs in a given section:</strong> to complete these exercise you will need to apply seperate font-family rules to headings and paragraphs within a given section. This means you need to select each separately. In order to accomplish this, you need to learn another <em>CSS selector</em>.</p>
+  <p>The following syntax selects all p tags inside the introduction section:<br>
+    <code>#introduction p {
+    }</code><br>
+    More generally, any selector followed by a space followed by another selector will select any elements defined by the second selector nested inside any elements described by the first selector. For more about selectors, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">this</a>. For the examples below, to select the heading for a given section id use:<br>
+    <code>#sectionID h2 </code><br>
+    For the paragraphs:<br>
+    <code>#sectionID p</code>
+  </p>
+</section>
+<section id="hospital">
+  <em>The headline and text below are taken from the website of a major Children's Hospital.</em>
+  <h2>Golisano Children's Hospital Pediatric Practice</h2>
+
+  <p>We are the area’s largest pediatric clinic, serving over 12,000 children in the greater Rochester area. Our practice offers exceptional healthcare services for children from birth to age 21. We also treat a variety of complicated medical conditions. We have doctors who are experts in the care of asthma, ADHD, obesity, and lead poisoning.</p>
+
+  <p>Our practice is grouped into four teams for you to choose from. As a patient of our practice, your child will receive comprehensive and coordinated care by one of the four teams so that a consistent group of pediatricians, resident doctors, nurses, social workers, care coordinators, and receptionists care for your child. This helps our staff to better know your child and develop a partnership of mutual responsibility and trust with your whole family for the best health outcomes.</p>
+</section>
+<section id="iceCream">
+  <em>The following is an ice cream flavor description from the website of a major specialty brand</em>
+  <h2>Spectacular Speculoos ™</h2>
+  <p>To feed your fascination for that spectacular crushed-cookie spread with the funny-looking name, you could tease into the cinnamony-spiced speculoos cookies first, or spoon-dive directly into the cookified core of speculoos cookie butter.</p>
+</section>
+<section id="whiteHouse">
+  <em>The following is taken from the official White House website</em>
+  <h2>President Barack Obama</h2>
+  <p>Barack H. Obama is the 44th President of the United States.</p>
+  <p>His story is the American story — values from the heartland, a middle-class upbringing in a strong family, hard work and education as the means of getting ahead, and the conviction that a life so blessed should be lived in service to others.</p>
+  <p>With a father from Kenya and a mother from Kansas, President Obama was born in Hawaii on August 4, 1961. He was raised with help from his grandfather, who served in Patton's army, and his grandmother, who worked her way up from the secretarial pool to middle management at a bank.</p>
+</section>
+</body>
+</html>

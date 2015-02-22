@@ -4,21 +4,7 @@
 <title>Fonts! Fonts! Fonts</title>
 <meta charset="utf-8" />
 <style>
-#serif {
-  font-family: serif;
-}
-#sans {
-  font-family: sans-serif;
-}
-#monospace {
-  font-family: monospace;
-}
-#cursive {
-  font-family: cursive;
-}
-#fantasy {
-  font-family: fantasy;
-}
+
 </style>
 </head>
 <body>
@@ -39,11 +25,24 @@
 <p>Serif and sans-serif you should recognize from our reading. (NOTE: Oldstyle, slab-serif, and modern fonts are all serif fonts.) "Cursive" is basically what the book call "script," and "fantasy" is effectively "decorative." These generic family names tell the browser to pick something from the broad family of fonts if nothing else is available for use.</p>
 <h3>Exercise 1</h3>
 Try the generic family names now. Add css rules to the style element of this document so each of the family names in the list above is displayed in a the generic font from that family (i.e. serif in a serif font, sans-serif in sans-serif). Try to remember what this font looks like! If you see it after trying to apply a local or web fonts, something has gone wrong! (Hint: you'll need to select by id, using the '#' to get this to work)
-
+</section>
+<section id="localFonts">
+  <h2>Local Fonts</h2>
+  In addition to the generic family names, we can also specify a specific font we want the browser to use by name. However, <em>the user must have this font installed on his or her computer for the font to display correctly</em>. In other words, if we choose a font we have installed on our own computer for our design, but the user who visits our web page does not have this font installed on his or her computer, the font will not display. This can cause real headaches, which is why we rely on web fonts, discussed below.
+<p>When we do use local fonts, we rely on web-safe fonts whenever possible. Web-safe fonts are fonts that are widely installed, so we can expect most visitors to our site to have them available. <a href="http://www.cssfontstack.com/">This page</a> is a good resource for web-safe fonts. Click on any of the named "font stacks" to see css that incorporates a font-family rule that attempts to approximate the named font on most computers. The percentage numbers below each named stack show what percentage of macintosh and windows computers have a font from this stack installed.</p>
+<h3>Exercise</h3>
+  Try it out! Set each of the list items below to a different font stack and see how they display. See if any of the stacks differ across the different computers in your group.
+  <ul>
+    <li id="stackOne">The quick brown fox jumped over the lazy dog</li>
+    <li id="stackTwo">The quick brown fox jumped over the lazy dog</li>
+    <li id="stackThree">The quick brown fox jumped over the lazy dog</li>
+  </ul>
+</section>
 <section id="usingGFonts">
-	<h1>Using Google Fonts</h1>
+	<h2>Using Google Fonts As a Web Font Provider</h2>
+  <p>To avoid some of the headaches of font-stack design and to ensure that the font we select as designers is the font our users see, we employ web fonts. Web fonts are provided by a font service, which makes fonts available on server. Since the fonts are availble on a server, they do not need to be installed locally on the user's computer (however, if something causes the font service to go down, the fonts will become unavailble and stop displaying). There are many font services out there, including Adobe's TypeKit service, which many designers like. However, most services charge by the font for use, and can get a bit expensive. For that reason, we will use <a href="https://www.google.com/fonts">Google's font service</a>, which is free of cost, for this class.
 	<p>
-	Remember that, for each Google font you want to use, you must include 2 lines of code in the head section of your page. The first line is a link element that includes the font information from Google's servers. The second is a font-family rule that tells the browser where you want to apply the font on the page. So, to include the font "Alegreya" and use it as the default font for all elements we would need to add this link line before our style section:</p>
+	For each Google font you want to use, you must include 2 lines of code in the head section of your page. The first line is a link element that includes the font information from Google's servers. The second is a font-family rule that tells the browser where you want to apply the font on the page. Try this out now. Include the font "Alegreya" and use it as the default font for all elements by adding this line before our style section:</p>
 	<p>
          &lt;link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'&gt;
 	</p>
@@ -55,8 +54,10 @@ Try the generic family names now. Add css rules to the style element of this doc
 	  font-family: 'Alegreya', serif;<br />
 	}
 	</p>
-	<p>
-	We could also add this line to a seperate style sheet, so long as we linked this seperate stylesheet <em>After</em> linking the Google Stylesheet with the font information. To add another font, say "Bitter" we'd need to add another stylesheet link, and then use the font-family rule to describe where this font should appear!</p>
+  <p>
+  Browse through the available fonts on Google's font service and find one you like. Then set this font, instead of Alegreya as the font for the body of this page. To find the information you need to accomplish this: click the "quick use button" for the font you want to use, which is the second button in the row of three small grey buttons to the left of the blue "Add to collection" button. (Ask if you need me to point it out.) On the next page, the "add this code to your website" section gives the link you need to include the font information and the "integrate the fonts into your CSS" section gives the font-family property for your style section.</p>
+  <h3>Exercise</h3>
+  Follow <a href="examples.html">this link</a> to a page with some example situations. For each situation, choose an appropriate google font for the headline and body text of the given article.
 </section>
 
 </body>
